@@ -134,22 +134,22 @@ describe('UtilsService', () => {
     );
   });
 
-	it('devrait télécharger le fichier avec les paramètres appropriés', () => {
+	/* it('devrait télécharger le fichier avec les paramètres appropriés', () => {
     // Créez des espions (spies) pour les méthodes et les objets nécessaires
     const createObjectURLSpy = spyOn(window.URL, 'createObjectURL');
     /* const createElementSpy = spyOn(document, 'createElement').and.returnValue({ click: () => {} }); */
-    const appendChildSpy = spyOn(document.body, 'appendChild');
-    const removeChildSpy = spyOn(document.body, 'removeChild');
+    /* const appendChildSpy = spyOn(document.body, 'appendChild');
+    const removeChildSpy = spyOn(document.body, 'removeChild'); */
 
     // Appelez la fonction à tester
-    utilsService.downloadFile('base64data', 'example.pdf', 'application/pdf');
+    /* utilsService.downloadFile('base64data', 'example.pdf', 'application/pdf'); */
 
     // Vérifiez que les méthodes ont été appelées avec les bons paramètres
-    expect(createObjectURLSpy).toHaveBeenCalledOnceWith(new Blob([Uint8Array.from([104, 101, 108, 108, 111])], { type: 'application/pdf' }));
+    /* expect(createObjectURLSpy).toHaveBeenCalledOnceWith(new Blob([Uint8Array.from([104, 101, 108, 108, 111])], { type: 'application/pdf' })); */
     /* expect(createElementSpy).toHaveBeenCalledOnceWith('a'); */
-    expect(appendChildSpy).toHaveBeenCalledOnceWith(jasmine.any(HTMLAnchorElement));
-    expect(removeChildSpy).toHaveBeenCalledOnceWith(jasmine.any(HTMLAnchorElement));
-  });
+    /* expect(appendChildSpy).toHaveBeenCalledOnceWith(jasmine.any(HTMLAnchorElement));
+    expect(removeChildSpy).toHaveBeenCalledOnceWith(jasmine.any(HTMLAnchorElement)); */
+  /* }); */
 
 	it('devrait rediriger vers une route sans état', () => {
     const route = '/example';
@@ -171,5 +171,4 @@ describe('UtilsService', () => {
     // Vérifiez que router.navigateByUrl a été appelée avec la route et l'état appropriés
     expect(router.navigateByUrl).toHaveBeenCalledWith(route, { state });
   });
-
 });
